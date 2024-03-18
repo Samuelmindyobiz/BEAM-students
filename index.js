@@ -1,9 +1,12 @@
 import chalk from "chalk"
 import http from 'http'
+import 'dotenv/config'
 
 
-const host = 'localhost'
-const port = 8000
+const host = process.env.HOST
+const port = process.env.PORT
+
+console.log(process.env)
 
 const server = http.createServer((request, response) => {
     response.end('<h1>hello World</h1>')
@@ -16,10 +19,11 @@ console.log("hello world")
 
 
 
-console.log(chalk.blue('Samuel'));
-console.log(chalk.green('Paul'));
-console.log(chalk.yellow('Alex'));
-console.log(chalk.red('Wara'));
+
+// console.log(chalk.blue('Samuel'));
+// console.log(chalk.green('Paul'));
+// console.log(chalk.yellow('Alex'));
+// console.log(chalk.red('Wara'));
 
 
 
